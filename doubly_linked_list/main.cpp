@@ -20,22 +20,24 @@ int main() {
     // test append function
     test_append();
 
+    // test insert function
+    // this function insert a node with a particular value 
+    // at a particular index
+    test_insert();
+
+    // test delete_first function
+    test_delete_first();
+
     // test delete_last function
-    std::cout << "\n=== Delete Last function test ==" << std::endl;
-    // 3 items
-    std::cout << my_dll;
-    my_dll->delete_last();
-    // 2 items left
-    std::cout << my_dll;
-    my_dll->delete_last();
-    // 1 item left
-    std::cout << my_dll;
-    my_dll->delete_last();
-    // o item left
-    std::cout << my_dll;
-    my_dll->delete_last();
-    // just to be sure
-    std::cout << my_dll;
+    test_delete_last();
+
+    // test get function
+    // this function returns a value of the node of given index
+    test_get();
+
+    // test set function
+    // this function changes the value of the node with a particular index
+    test_set();
 
     return 0;
 }

@@ -13,3 +13,21 @@ void test_prepend();
 // test add a node to the end of the DLL
 void test_append();
 
+// test insert function
+// this function insert a node with a particular value 
+// at a particular index
+void test_insert();
+
+// test delete first node in the DLL
+void test_delete_first();
+
+// test delete last node in the DLL
+void test_delete_last();
+
+// test get function that returns a value of the node
+// of the given index
+void test_get();
+
+// test set function
+// this function changes the value of the node with a particular index
+void test_set();

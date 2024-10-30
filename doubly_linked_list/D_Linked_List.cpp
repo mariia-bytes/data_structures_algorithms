@@ -26,7 +26,7 @@ D_Linked_List::D_Linked_List (int value) {
 }
 
 
-// getters
+// basic getters
 void D_Linked_List::get_head() {
     std::cout << "Head: " << head->value << std::endl;
 }
@@ -37,6 +37,38 @@ void D_Linked_List::get_tail() {
 
 void D_Linked_List::get_length() {
     std::cout << "Length: " << length << std::endl;
+}
+
+// get the value of the node with given index
+Node* D_Linked_List::get (int index) {
+    // edge cases: index is out of range
+    if (index < 0 || index >= length) return nullptr;
+    // if index is in range
+    Node* temp = head;
+    // if index is in first half of the list
+    if (index < length/2) {
+        for (int i = 0; i < index; i++) {
+            temp = temp->next;
+        }
+    // if index is in the second half of the list
+    } else {
+        temp = tail;
+        for (int i = length - 1; i > index; i--) {
+            temp = temp->prev;
+        }
+    }
+    return temp;
+}
+
+
+// change a value of the node with a particular index
+bool D_Linked_List::set(int index, int value) {
+    Node* temp = get(index); // already has optimization - cool, uh?
+    if (temp) {
+        temp->value = value;
+        return true;
+    }
+    return false;
 }
 
 
@@ -72,6 +104,53 @@ void D_Linked_List::append(int value) {
         tail = new_node;
     }
     length++;
+}
+
+
+// add (insert) a node with a particular value to a particular index
+bool D_Linked_List::insert(int index, int value) {
+    // check if the index is out of range
+    if (index < 0 || index > length) return false;
+    // if the index is 0 => begginig od the DLL
+    if (index == 0) {
+        prepend(value);
+        return true;
+    }
+    // if the index is equal to the end of the DLL
+    if (index == length) {
+        append(value);
+        return true;
+    }
+    // if the node should be inserted somewhere in the middle of the DLL
+    Node* new_node = new Node(value);
+    Node* before = get(index - 1); // get function is O(n)
+    Node* after = before->next; // that way it's O(1);
+    new_node->prev = before;
+    new_node->next = after;
+    before->next = new_node;
+    after->prev = new_node;
+    
+    length++;
+    return true;
+}
+
+
+// delete first node
+void D_Linked_List::delete_first() {
+    // edge case: empty DLL
+    if (!head) return;
+    // edge case: one node in DLL
+    Node* temp = head;
+    if (!head->next) {
+        head = nullptr;
+        tail = nullptr;
+    // DLL with two or more nodes
+    } else {
+        head = head->next;
+        head->prev = nullptr;
+    }
+    delete temp;
+    length--;
 }
 
 

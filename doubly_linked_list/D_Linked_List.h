@@ -15,10 +15,13 @@ class D_Linked_List {
         // constructor
         D_Linked_List(int value);
 
-        // getters
+        // basics getters
         void get_head();
         void get_tail();
         void get_length();
+
+        // get function returns value of the node with given index
+        Node* get(int index);
 
         // add a node with given value to the begginig of the DLL
         void prepend(int value);
@@ -26,8 +29,17 @@ class D_Linked_List {
         // add a node with given value to the end of the DLL
         void append(int value);
 
+        // add (insert) a node with a particular value at a particular index
+        bool insert(int index, int value);
+
+        // delete first node
+        void delete_first();
+
         // delete last node
         void delete_last();
+
+        // change a value of the node of a particular index
+        bool set(int index, int value);
 };
 
 #endif // D_LINKED_LIST_H
