@@ -25,6 +25,16 @@ D_Linked_List::D_Linked_List (int value) {
     length = 1;
 }
 
+// destructor
+D_Linked_List::~D_Linked_List() {
+    Node* temp = head;
+    while (head) {
+        head = head->next;
+        delete temp;
+        temp = head;
+    }
+}
+
 
 // basic getters
 void D_Linked_List::get_head() {

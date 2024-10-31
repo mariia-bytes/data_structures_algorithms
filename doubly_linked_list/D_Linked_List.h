@@ -15,6 +15,9 @@ class D_Linked_List {
         // constructor
         D_Linked_List(int value);
 
+        // destructor
+        ~D_Linked_List();
+
         // basics getters
         void get_head();
         void get_tail();
