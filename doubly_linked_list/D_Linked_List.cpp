@@ -172,3 +172,21 @@ void D_Linked_List::delete_last() {
     delete temp;
     length--;
 }
+
+
+// delete node at a particular index
+void D_Linked_List::delete_node(int index) {
+    // covering out-of-range-index situation
+    if (index < 0 || index >= length) return;
+    // removing the first node
+    if (index == 0) return delete_first();
+    // removing the last element
+    if (index == length - 1) return delete_last();
+    
+    // removing the node somethere in the middle of DLL
+    Node* temp = get(index);
+    temp->next->prev = temp->prev;
+    temp->prev->next = temp->next;
+    delete temp;
+    length--;
+}

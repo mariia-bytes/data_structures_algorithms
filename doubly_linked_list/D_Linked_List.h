@@ -38,6 +38,9 @@ class D_Linked_List {
         // delete last node
         void delete_last();
 
+        // delete node at a particular index
+        void delete_node(int index);
+
         // change a value of the node of a particular index
         bool set(int index, int value);
 };

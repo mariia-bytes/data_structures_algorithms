@@ -31,6 +31,9 @@ int main() {
     // test delete_last function
     test_delete_last();
 
+    // test delete_node function
+    test_delete_node();
+
     // test get function
     // this function returns a value of the node of given index
     test_get();

@@ -24,6 +24,9 @@ void test_delete_first();
 // test delete last node in the DLL
 void test_delete_last();
 
+// test delete node at a particular index
+void test_delete_node();
+
 // test get function that returns a value of the node
 // of the given index
 void test_get();

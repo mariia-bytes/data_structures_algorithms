@@ -16,7 +16,7 @@
 
 // test add a node to the begging of the DLL
 void test_prepend() {
-    std::cout << "\n=== Prepend function test ===" << std::endl;
+    std::cout << "\n=== Test Prepend function ===" << std::endl;
 
     D_Linked_List* dll_prep = new D_Linked_List(2);
     dll_prep->append(3);
@@ -29,7 +29,7 @@ void test_prepend() {
 
 // test add a node to the end of the DLL
 void test_append() {
-    std::cout << "\n=== Append function test ===" << std::endl;
+    std::cout << "\n=== Test Append function ===" << std::endl;
 
     D_Linked_List* dll_app = new D_Linked_List(1);
     std::cout << dll_app;
@@ -69,7 +69,7 @@ void test_insert() {
 
 // test delete first node in the DLL
 void test_delete_first() {
-    std::cout << "\n=== Delete First function test ===" << std::endl;
+    std::cout << "\n=== Test Delete First function ===" << std::endl;
 
     D_Linked_List* dll_del_first = new D_Linked_List(1);
     dll_del_first->append(2);
@@ -88,7 +88,7 @@ void test_delete_first() {
 
 // test delete last node in the DLL
 void test_delete_last() {
-    std::cout << "\n=== Delete Last function test ==" << std::endl;
+    std::cout << "\n=== Test Delete Last function ==" << std::endl;
 
     D_Linked_List* dll_del_last = new D_Linked_List(1);
     dll_del_last->append(2);
@@ -108,6 +108,30 @@ void test_delete_last() {
     dll_del_last->delete_last();
     // just to be sure
     std::cout << dll_del_last;
+}
+
+
+// test delete node at a particular index
+void test_delete_node() {
+    std::cout << "\n=== Test Delete Node function ===" << std::endl;
+
+    D_Linked_List* dll_del_node = new D_Linked_List(0);
+    dll_del_node->append(1);
+    dll_del_node->append(2);
+    dll_del_node->append(3);
+    std::cout << dll_del_node << std::endl;
+
+    dll_del_node->delete_node(1);
+    std::cout << dll_del_node;
+
+    dll_del_node->delete_node(0);
+    std::cout << dll_del_node;
+
+    dll_del_node->delete_node(1);
+    std::cout << dll_del_node;
+
+    dll_del_node->delete_node(-10);
+    std::cout << dll_del_node;
 }
 
 
