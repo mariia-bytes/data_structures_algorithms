@@ -1,0 +1,2 @@
+This directory includes realization of a stack data structure.
+Thought the most intuitive way to impliment a stuck first seems to be using a vector, the most EFFICIENT way is using a single linked list as removing (popping) and adding (pushing) a new element'd be O(1) rather than O(n) in case of a vector. 
