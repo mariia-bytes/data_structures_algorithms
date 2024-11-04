@@ -10,7 +10,7 @@ std::ostream &operator<<(std::ostream &os, const Linked_List* list) {
     Node* current = list->head;
     while (current) {
         os << current->value;
-        if (current->next != nullptr) {
+        if (current->next) {
             os << " -> ";
         }
         current = current->next;
