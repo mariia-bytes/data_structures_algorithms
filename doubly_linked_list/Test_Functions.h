@@ -7,6 +7,9 @@
  * in Test_Functions.cpp file
 ***************************************************/
 
+// test constructor and operator<<
+void test_constructor();
+
 // test add a node to the begging of the DLL
 void test_prepend();
 

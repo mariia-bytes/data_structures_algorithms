@@ -10,9 +10,8 @@
 
 int main() {
 
-    // creation of a DLL and checking operator<<
-    D_Linked_List* my_dll = new D_Linked_List(1);
-    std::cout << "\nDLL: " << my_dll;
+    // test constructor and operator<<
+    test_constructor();
 
     // test prepend function
     test_prepend();

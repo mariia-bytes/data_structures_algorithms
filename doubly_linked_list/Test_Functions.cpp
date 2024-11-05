@@ -14,6 +14,17 @@
 #include "Test_Functions.h"
 
 
+// test constructor and operator<<
+void test_constructor() {
+    std::cout << "\n=== Test Constructor and Operator<< ===" << std::endl;
+
+    D_Linked_List* my_dll = new D_Linked_List(1);
+    std::cout << "\nDLL: " << my_dll;
+    
+    delete my_dll;
+}
+
+
 // test add a node to the begging of the DLL
 void test_prepend() {
     std::cout << "\n=== Test Prepend function ===" << std::endl;
@@ -24,6 +35,8 @@ void test_prepend() {
 
     dll_prep->prepend(1);
     std::cout << dll_prep;
+
+    delete dll_prep;
 }
 
 
@@ -39,6 +52,8 @@ void test_append() {
 
     dll_app->append(3);
     std::cout << dll_app;
+
+    delete dll_app;
 }
 
 
@@ -64,6 +79,8 @@ void test_insert() {
     std::cout << std::endl;
     dll_insert->insert(-9, 3); // invalid case
     std::cout << dll_insert;
+
+    delete dll_insert;
 }
 
 
@@ -83,6 +100,8 @@ void test_delete_first() {
 
     dll_del_first->delete_first();
     std::cout << dll_del_first;
+
+    delete dll_del_first;
 }
 
 
@@ -108,6 +127,8 @@ void test_delete_last() {
     dll_del_last->delete_last();
     // just to be sure
     std::cout << dll_del_last;
+
+    delete dll_del_last;
 }
 
 
@@ -132,6 +153,8 @@ void test_delete_node() {
 
     dll_del_node->delete_node(-10);
     std::cout << dll_del_node;
+
+    delete dll_del_node;
 }
 
 
@@ -149,6 +172,8 @@ void test_get() {
     for (int i = 0; i < 4; i++) {
         std::cout << "Index " << i << " value: " << dll_get->get(i)->value << std::endl;
     }
+
+    delete dll_get;
 }
 
 // test set function
@@ -166,4 +191,6 @@ void test_set() {
         dll_set->set(i, i);
         std::cout << dll_set;
     }
+
+    delete dll_set;
 }
