@@ -21,20 +21,19 @@ class Stack {
 
     public:
         // constructor
-        Stack(int value) {
-            Node* new_node = new Node(value);
-            top = new_node;
-            height = 1;
-        }
+        Stack(int value);
 
         // basic getters
-        void get_top() {
-            std::cout << "Top: " << top->value << std::endl;
-        }
+        void get_top();
+        void get_height();
 
-        void get_height() {
-            std::cout << "Height: " << height << std::endl;
-        }
+        // push (add) an item with a given value
+        // basically a prepend function in SLL
+        void push(int value);
+
+        // pop (remove) a top item in a S
+        // similar to delete_first in SLL
+        int pop(); // returns a value of popped element
 };
 
 #endif // _STACK_H_

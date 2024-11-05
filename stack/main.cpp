@@ -8,11 +8,17 @@
 
 #include "Node.h"
 #include "Stack.h"
+#include "Test.h"
 
 int main() {
-    Stack* my_stack = new Stack(1);
+    // test constructor and operator<<
+    test_constructor();
 
-    std::cout << my_stack;
+    // test push member function
+    test_push();
+
+    // test pop member function
+    test_pop();
 
     return 0;
 }
