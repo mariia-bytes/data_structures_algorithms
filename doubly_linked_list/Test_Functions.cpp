@@ -10,7 +10,7 @@
 #include <iostream>
 
 #include "Node.h"
-#include "D_Linked_List.h"
+#include "Doubly_Linked_List.h"
 #include "Test_Functions.h"
 
 
@@ -18,7 +18,7 @@
 void test_constructor() {
     std::cout << "\n=== Test Constructor and Operator<< ===" << std::endl;
 
-    D_Linked_List* my_dll = new D_Linked_List(1);
+    Doubly_Linked_List* my_dll = new Doubly_Linked_List(1);
     std::cout << "\nDLL: " << my_dll;
     
     delete my_dll;
@@ -29,7 +29,7 @@ void test_constructor() {
 void test_prepend() {
     std::cout << "\n=== Test Prepend function ===" << std::endl;
 
-    D_Linked_List* dll_prep = new D_Linked_List(2);
+    Doubly_Linked_List* dll_prep = new Doubly_Linked_List(2);
     dll_prep->append(3);
     std::cout << dll_prep;
 
@@ -44,7 +44,7 @@ void test_prepend() {
 void test_append() {
     std::cout << "\n=== Test Append function ===" << std::endl;
 
-    D_Linked_List* dll_app = new D_Linked_List(1);
+    Doubly_Linked_List* dll_app = new Doubly_Linked_List(1);
     std::cout << dll_app;
 
     dll_app->append(2);
@@ -63,7 +63,7 @@ void test_append() {
 void test_insert() {
     std::cout << "\n=== Test Insert function ===" << std::endl;
 
-    D_Linked_List* dll_insert = new D_Linked_List(1);
+    Doubly_Linked_List* dll_insert = new Doubly_Linked_List(1);
     dll_insert->append(3);
     std::cout << dll_insert << std::endl;
 
@@ -88,7 +88,7 @@ void test_insert() {
 void test_delete_first() {
     std::cout << "\n=== Test Delete First function ===" << std::endl;
 
-    D_Linked_List* dll_del_first = new D_Linked_List(1);
+    Doubly_Linked_List* dll_del_first = new Doubly_Linked_List(1);
     dll_del_first->append(2);
     std::cout << dll_del_first;
 
@@ -109,7 +109,7 @@ void test_delete_first() {
 void test_delete_last() {
     std::cout << "\n=== Test Delete Last function ==" << std::endl;
 
-    D_Linked_List* dll_del_last = new D_Linked_List(1);
+    Doubly_Linked_List* dll_del_last = new Doubly_Linked_List(1);
     dll_del_last->append(2);
     dll_del_last->append(3);
 
@@ -136,7 +136,7 @@ void test_delete_last() {
 void test_delete_node() {
     std::cout << "\n=== Test Delete Node function ===" << std::endl;
 
-    D_Linked_List* dll_del_node = new D_Linked_List(0);
+    Doubly_Linked_List* dll_del_node = new Doubly_Linked_List(0);
     dll_del_node->append(1);
     dll_del_node->append(2);
     dll_del_node->append(3);
@@ -163,7 +163,7 @@ void test_delete_node() {
 void test_get() {
     std::cout << "\n=== Test Get function ===" << std::endl;
 
-    D_Linked_List* dll_get = new D_Linked_List(0);
+    Doubly_Linked_List* dll_get = new Doubly_Linked_List(0);
     dll_get->append(1);
     dll_get->append(2);
     dll_get->append(3);
@@ -181,7 +181,7 @@ void test_get() {
 void test_set() {
     std::cout << "\n=== Test Set function ===" << std::endl;
 
-    D_Linked_List* dll_set = new D_Linked_List(11);
+    Doubly_Linked_List* dll_set = new Doubly_Linked_List(11);
     dll_set->append(4);
     dll_set->append(23);
     dll_set->append(7);

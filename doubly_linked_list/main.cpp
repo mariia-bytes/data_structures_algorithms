@@ -5,7 +5,7 @@
  * including big amount of problems from LeetCode
 ****************************************************/
 #include "Node.h"
-#include "D_Linked_List.h"
+#include "Doubly_Linked_List.h"
 #include "Test_Functions.h"
 
 int main() {

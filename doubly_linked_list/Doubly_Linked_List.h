@@ -1,11 +1,11 @@
-#ifndef D_LINKED_LIST_H
-#define D_LINKED_LIST_H
+#ifndef DOUBLY_LINKED_LIST_H
+#define DOUBLY_LINKED_LIST_H
 
 #include <iostream>
 #include "Node.h"
 
-class D_Linked_List {
-    friend std::ostream &operator<<(std::ostream &os, const D_Linked_List *list);
+class Doubly_Linked_List {
+    friend std::ostream &operator<<(std::ostream &os, const Doubly_Linked_List *list);
     private:
         Node* head;
         Node* tail;
@@ -13,10 +13,10 @@ class D_Linked_List {
 
     public:
         // constructor
-        D_Linked_List(int value);
+        Doubly_Linked_List(int value);
 
         // destructor
-        ~D_Linked_List();
+        ~Doubly_Linked_List();
 
         // basics getters
         void get_head();
@@ -48,4 +48,4 @@ class D_Linked_List {
         bool set(int index, int value);
 };
 
-#endif // D_LINKED_LIST_H
+#endif // DOUBLY_LINKED_LIST_H

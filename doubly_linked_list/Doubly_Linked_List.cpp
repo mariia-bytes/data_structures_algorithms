@@ -1,8 +1,16 @@
-#include <iostream>
-#include "Node.h"
-#include "D_Linked_List.h"
+/*********************************************************************
+ * This Doubly_Linked_List.cpp file includes implimentations of the 
+ * member and friend functions of Doubly_Linked_List class.
+ * Declaration of the Doubly_Linked_List class can be found in 
+ * the Doubly_Linked_List.h file.
+**********************************************************************/
 
-std::ostream &operator<<(std::ostream &os, const D_Linked_List *list) {
+#include <iostream>
+
+#include "Node.h"
+#include "Doubly_Linked_List.h"
+
+std::ostream &operator<<(std::ostream &os, const Doubly_Linked_List *list) {
     os << "[ ";
     Node* current = list->head;
     while (current) {
@@ -18,7 +26,7 @@ std::ostream &operator<<(std::ostream &os, const D_Linked_List *list) {
 
 
 // constructor
-D_Linked_List::D_Linked_List (int value) {
+Doubly_Linked_List::Doubly_Linked_List (int value) {
     Node* new_node = new Node(value);
     head = new_node;
     tail = new_node;
@@ -26,7 +34,7 @@ D_Linked_List::D_Linked_List (int value) {
 }
 
 // destructor
-D_Linked_List::~D_Linked_List() {
+Doubly_Linked_List::~Doubly_Linked_List() {
     Node* temp = head;
     while (head) {
         head = head->next;
@@ -37,20 +45,20 @@ D_Linked_List::~D_Linked_List() {
 
 
 // basic getters
-void D_Linked_List::get_head() {
+void Doubly_Linked_List::get_head() {
     std::cout << "Head: " << head->value << std::endl;
 }
 
-void D_Linked_List::get_tail() {
+void Doubly_Linked_List::get_tail() {
     std::cout << "Tail: " << tail->value << std::endl;
 }
 
-void D_Linked_List::get_length() {
+void Doubly_Linked_List::get_length() {
     std::cout << "Length: " << length << std::endl;
 }
 
 // get the value of the node with given index
-Node* D_Linked_List::get (int index) {
+Node* Doubly_Linked_List::get (int index) {
     // edge cases: index is out of range
     if (index < 0 || index >= length) return nullptr;
     // if index is in range
@@ -72,7 +80,7 @@ Node* D_Linked_List::get (int index) {
 
 
 // change a value of the node with a particular index
-bool D_Linked_List::set(int index, int value) {
+bool Doubly_Linked_List::set(int index, int value) {
     Node* temp = get(index); // already has optimization - cool, uh?
     if (temp) {
         temp->value = value;
@@ -83,7 +91,7 @@ bool D_Linked_List::set(int index, int value) {
 
 
 // add a node with given value to the begginig of the DLL
-void D_Linked_List::prepend(int value) {
+void Doubly_Linked_List::prepend(int value) {
     Node* new_node = new Node(value);
     // edge-case: empty list
     if (!head) {
@@ -100,7 +108,7 @@ void D_Linked_List::prepend(int value) {
 
 
 // add a node with given value to the end of the DLL
-void D_Linked_List::append(int value) {
+void Doubly_Linked_List::append(int value) {
     Node* new_node = new Node(value);
 
     // edge case: DLL is empty
@@ -118,7 +126,7 @@ void D_Linked_List::append(int value) {
 
 
 // add (insert) a node with a particular value to a particular index
-bool D_Linked_List::insert(int index, int value) {
+bool Doubly_Linked_List::insert(int index, int value) {
     // check if the index is out of range
     if (index < 0 || index > length) return false;
     // if the index is 0 => begginig od the DLL
@@ -146,7 +154,7 @@ bool D_Linked_List::insert(int index, int value) {
 
 
 // delete first node
-void D_Linked_List::delete_first() {
+void Doubly_Linked_List::delete_first() {
     // edge case: empty DLL
     if (!head) return;
     // edge case: one node in DLL
@@ -165,7 +173,7 @@ void D_Linked_List::delete_first() {
 
 
 // delete last node
-void D_Linked_List::delete_last() {
+void Doubly_Linked_List::delete_last() {
     // edge case: empty DLL
     if (!head) return;
 
@@ -185,7 +193,7 @@ void D_Linked_List::delete_last() {
 
 
 // delete node at a particular index
-void D_Linked_List::delete_node(int index) {
+void Doubly_Linked_List::delete_node(int index) {
     // covering out-of-range-index situation
     if (index < 0 || index >= length) return;
     // removing the first node
