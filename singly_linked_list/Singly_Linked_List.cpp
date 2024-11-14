@@ -47,7 +47,7 @@ void Singly_Linked_List::print_list() {
     } 
 }
 
-///////////// Additors / Insertors
+// ADDERS
 
 // Add a node with given value to the beginning of the Linked List
 void Singly_Linked_List::prepend(int value) {
@@ -105,10 +105,9 @@ bool Singly_Linked_List::insert(int index, int value) {
     return true;
 }
 
+// DELETERS
 
-//////////////// Deletors
-
-// Delete the first node in the Linked List
+// Delete the first node in a SLL
 void Singly_Linked_List::delete_first() {
     // edge case: empty list
     if (!head) return;
@@ -126,18 +125,18 @@ void Singly_Linked_List::delete_first() {
     length--;
 }
 
-// Delete the last node from the SLL
+// Delete the last node from a SLL
 void Singly_Linked_List::delete_last() {
     // edge case: empty list
     if (!head) return;
 
     Node* temp = head;
 
-    // edge case: only one node in the SLL
+    // edge case: only one node in a SLL
     if (head->next == nullptr) {
         head = nullptr;
         tail = nullptr;
-    } else { // non-empty list with more than 1 node       
+    } else { // non-empty SLL with more than 1 node       
         Node* pre = head;
         while (temp->next != nullptr) {
             pre = temp;
