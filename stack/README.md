@@ -12,8 +12,8 @@ Although the most intuitive way to implement a stack might seem to be using a ve
 
 - **Push**: Add an element to the top of the stack.
 - **Pop**: Remove and return the top element from the stack.
-- **Peek**: Return the top element without removing it.
-- **IsEmpty**: Check if the stack is empty.
+- **Get top**: Return the value of the top element without removing it.
+- **Get height**: Return the number of elements on the stack.
 
 ## Downsides
 
