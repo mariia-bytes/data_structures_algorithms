@@ -27,6 +27,16 @@ Stack::Stack(int value) {
     height = 1;
 }
 
+// destructor
+Stack::~Stack() {
+    Node* temp = top;
+    while (top) { 
+        top = top->next;
+        delete temp;
+        temp = top;
+    }
+}
+
 
 // basic getters
 void Stack::get_top() {

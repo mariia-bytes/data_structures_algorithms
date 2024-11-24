@@ -22,6 +22,19 @@ void test_constructor() {
     delete stack_constr;
 }
 
+// test basic getters
+void test_getters() {
+    std::cout << "\n=== Test basic Getters ===\n" << std::endl;
+
+    Stack* stack_getters = new Stack(1);
+    stack_getters->push(2);
+    stack_getters->push(3);
+    std::cout << stack_getters << std::endl;
+
+    stack_getters->get_height();
+    stack_getters->get_top();
+}
+
 // test push (add) member function
 void test_push() {
     std::cout << "\n=== Test Push function ===\n" << std::endl;

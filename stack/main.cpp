@@ -1,9 +1,3 @@
-/****************************************************
- * 
- * 
- * 
-*****************************************************/
-
 #include <iostream>
 
 #include "Node.h"
@@ -13,6 +7,9 @@
 int main() {
     // test constructor and operator<<
     test_constructor();
+
+    // test basic getters
+    test_getters();
 
     // test push member function
     test_push();

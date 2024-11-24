@@ -9,6 +9,9 @@
 // test constructor and operator<<
 void test_constructor();
 
+// test basic getters
+void test_getters();
+
 // test push member function of S
 void test_push();
 

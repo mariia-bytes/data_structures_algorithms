@@ -3,7 +3,7 @@
  * single linked list data structure 
  * (look READM.md for reasons behind that choice).
  * 
- * Implimentation of the member functions can be
+ * Implementation of the member functions can be
  * found in Stack.cpp file.
 ***************************************************/
 
@@ -22,6 +22,9 @@ class Stack {
     public:
         // constructor
         Stack(int value);
+
+        // destructor
+        ~Stack();
 
         // basic getters
         void get_top();
