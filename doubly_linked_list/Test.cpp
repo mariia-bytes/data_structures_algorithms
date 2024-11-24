@@ -1,22 +1,22 @@
 /***************************************************
- * File Test_Function.cpp include implimentations of 
+ * File Test.cpp includes implementations of 
  * the test functions for Doubly Linked List
  * data structure.
  * 
  * Prototypes for these functions can be found
- * in Test_Functions.cpp file
+ * in Test.cpp file
 ***************************************************/
 
 #include <iostream>
 
 #include "Node.h"
 #include "Doubly_Linked_List.h"
-#include "Test_Functions.h"
+#include "Test.h"
 
 
 // test constructor and operator<<
 void test_constructor() {
-    std::cout << "\n=== Test Constructor and Operator<< ===" << std::endl;
+    std::cout << "\n=== Test Constructor and Operator<< ===\n" << std::endl;
 
     Doubly_Linked_List* my_dll = new Doubly_Linked_List(1);
     std::cout << "\nDLL: " << my_dll;
@@ -27,7 +27,7 @@ void test_constructor() {
 
 // test add a node to the begging of the DLL
 void test_prepend() {
-    std::cout << "\n=== Test Prepend function ===" << std::endl;
+    std::cout << "\n=== Test Prepend function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_prep = new Doubly_Linked_List(2);
     dll_prep->append(3);
@@ -42,7 +42,7 @@ void test_prepend() {
 
 // test add a node to the end of the DLL
 void test_append() {
-    std::cout << "\n=== Test Append function ===" << std::endl;
+    std::cout << "\n=== Test Append function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_app = new Doubly_Linked_List(1);
     std::cout << dll_app;
@@ -61,7 +61,7 @@ void test_append() {
 // this function insert a node with a particular value 
 // at a particular index
 void test_insert() {
-    std::cout << "\n=== Test Insert function ===" << std::endl;
+    std::cout << "\n=== Test Insert function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_insert = new Doubly_Linked_List(1);
     dll_insert->append(3);
@@ -86,7 +86,7 @@ void test_insert() {
 
 // test delete first node in the DLL
 void test_delete_first() {
-    std::cout << "\n=== Test Delete First function ===" << std::endl;
+    std::cout << "\n=== Test Delete First function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_del_first = new Doubly_Linked_List(1);
     dll_del_first->append(2);
@@ -107,7 +107,7 @@ void test_delete_first() {
 
 // test delete last node in the DLL
 void test_delete_last() {
-    std::cout << "\n=== Test Delete Last function ==" << std::endl;
+    std::cout << "\n=== Test Delete Last function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_del_last = new Doubly_Linked_List(1);
     dll_del_last->append(2);
@@ -134,7 +134,7 @@ void test_delete_last() {
 
 // test delete node at a particular index
 void test_delete_node() {
-    std::cout << "\n=== Test Delete Node function ===" << std::endl;
+    std::cout << "\n=== Test Delete Node function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_del_node = new Doubly_Linked_List(0);
     dll_del_node->append(1);
@@ -161,7 +161,7 @@ void test_delete_node() {
 // test get function that return a value of the node
 // of the given index
 void test_get() {
-    std::cout << "\n=== Test Get function ===" << std::endl;
+    std::cout << "\n=== Test Get function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_get = new Doubly_Linked_List(0);
     dll_get->append(1);
@@ -179,7 +179,7 @@ void test_get() {
 // test set function
 // this function changes the value of the node with a particular index
 void test_set() {
-    std::cout << "\n=== Test Set function ===" << std::endl;
+    std::cout << "\n=== Test Set function ===\n" << std::endl;
 
     Doubly_Linked_List* dll_set = new Doubly_Linked_List(11);
     dll_set->append(4);

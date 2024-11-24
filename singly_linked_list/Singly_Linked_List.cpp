@@ -1,3 +1,10 @@
+/*********************************************************************
+ * This Singly_Linked_List.cpp file includes implementations of the 
+ * member and friend functions of Singly_Linked_List class.
+ * Declaration of the Singly_Linked_List class can be found in 
+ * the Singly_Linked_List.h file.
+**********************************************************************/
+
 #include <iostream>
 
 #include "Node.h"
@@ -20,7 +27,7 @@ std::ostream &operator<<(std::ostream &os, const Singly_Linked_List* list) {
 }
 
 // constructor
-Singly_Linked_List::Singly_Linked_List(int value) {
+Singly_Linked_List::Singly_Linked_List(const int value) {
     Node* new_node = new Node(value);
     head = new_node;
     tail = new_node;
@@ -39,7 +46,7 @@ Singly_Linked_List::~Singly_Linked_List() {
 
 // Print SLL
 // I don't use this function as I overloaded ostream operator<<
-void Singly_Linked_List::print_list() {
+void Singly_Linked_List::print_list() const {
     Node* temp = head;
     while (temp) {
         std::cout << temp->value << std::endl;
@@ -50,7 +57,7 @@ void Singly_Linked_List::print_list() {
 // ADDERS
 
 // Add a node with given value to the beginning of the Linked List
-void Singly_Linked_List::prepend(int value) {
+void Singly_Linked_List::prepend(const int value) {
     Node* new_node = new Node(value);
             
     // edge case: empty list
@@ -65,7 +72,7 @@ void Singly_Linked_List::prepend(int value) {
 }
 
 // Add new node with given value to the end of the Linked List
-void Singly_Linked_List::append(int value) {
+void Singly_Linked_List::append(const int value) {
     Node* new_node = new Node(value);
     // edge case:: empty list
     if (!head) {
@@ -80,7 +87,7 @@ void Singly_Linked_List::append(int value) {
 
 // Insert a node with a particular value and partuicular index
 // inserting happens BEFORE given index
-bool Singly_Linked_List::insert(int index, int value) {
+bool Singly_Linked_List::insert(const int index, const int value) {
     // check if the input index is OUT of range
     if (index < 0 || index > length) return false;
 
@@ -150,7 +157,7 @@ void Singly_Linked_List::delete_last() {
 }
 
 // Delete a node from the SLL at the particular given index
-void Singly_Linked_List::delete_node(int index) {
+void Singly_Linked_List::delete_node(const int index) {
     // check if the input index is OUT of range
     if (index < 0 || index >= length) return;
 
@@ -169,7 +176,7 @@ void Singly_Linked_List::delete_node(int index) {
 }
 
 // Get the node from the SLL with this given index
-Node* Singly_Linked_List::get(int index) {
+Node* Singly_Linked_List::get(const int index) const {
     // check if the input index is OUT of range
     if (index < 0 || index >= length) return nullptr;
 
@@ -182,7 +189,7 @@ Node* Singly_Linked_List::get(int index) {
 }
 
 // Set the particular value to the particular node with the given index
-bool Singly_Linked_List::set(int index, int value) {   
+bool Singly_Linked_List::set(const int index, const int value) {   
     Node* temp = get(index); // check the inout index if it's in range or not
     
     // if the given index is IN of range
@@ -198,18 +205,18 @@ bool Singly_Linked_List::set(int index, int value) {
 // Some basic setters of getters
 // print the value of node to which the head is pointing 
 // (the first node in the SLL)
-void Singly_Linked_List::get_head() {
+void Singly_Linked_List::get_head() const {
     std::cout << "Head: " << head->value << std::endl;
 }
 
 // print the value of the node to which the tail is pointing 
 // (the last node in the SLL)
-void Singly_Linked_List::get_tail() {
+void Singly_Linked_List::get_tail() const {
     std::cout << "Tail: " << tail->value << std::endl; 
 }
 
 // print the length oh the SLL
-void Singly_Linked_List::get_length() {
+void Singly_Linked_List::get_length() const {
     std::cout << "Length: " << length << std::endl;
 }
 

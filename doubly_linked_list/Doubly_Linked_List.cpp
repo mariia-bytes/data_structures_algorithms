@@ -1,5 +1,5 @@
 /*********************************************************************
- * This Doubly_Linked_List.cpp file includes implimentations of the 
+ * This Doubly_Linked_List.cpp file includes implementations of the 
  * member and friend functions of Doubly_Linked_List class.
  * Declaration of the Doubly_Linked_List class can be found in 
  * the Doubly_Linked_List.h file.
@@ -26,7 +26,7 @@ std::ostream &operator<<(std::ostream &os, const Doubly_Linked_List *list) {
 
 
 // constructor
-Doubly_Linked_List::Doubly_Linked_List (int value) {
+Doubly_Linked_List::Doubly_Linked_List (const int value) {
     Node* new_node = new Node(value);
     head = new_node;
     tail = new_node;
@@ -45,20 +45,20 @@ Doubly_Linked_List::~Doubly_Linked_List() {
 
 
 // basic getters
-void Doubly_Linked_List::get_head() {
+void Doubly_Linked_List::get_head() const {
     std::cout << "Head: " << head->value << std::endl;
 }
 
-void Doubly_Linked_List::get_tail() {
+void Doubly_Linked_List::get_tail() const {
     std::cout << "Tail: " << tail->value << std::endl;
 }
 
-void Doubly_Linked_List::get_length() {
+void Doubly_Linked_List::get_length() const {
     std::cout << "Length: " << length << std::endl;
 }
 
 // get the value of the node with given index
-Node* Doubly_Linked_List::get (int index) {
+Node* Doubly_Linked_List::get (const int index) const {
     // edge cases: index is out of range
     if (index < 0 || index >= length) return nullptr;
     // if index is in range
@@ -80,7 +80,7 @@ Node* Doubly_Linked_List::get (int index) {
 
 
 // change a value of the node with a particular index
-bool Doubly_Linked_List::set(int index, int value) {
+bool Doubly_Linked_List::set(const int index, const int value) {
     Node* temp = get(index); // already has optimization - cool, uh?
     if (temp) {
         temp->value = value;
@@ -91,7 +91,7 @@ bool Doubly_Linked_List::set(int index, int value) {
 
 
 // add a node with given value to the begginig of the DLL
-void Doubly_Linked_List::prepend(int value) {
+void Doubly_Linked_List::prepend(const int value) {
     Node* new_node = new Node(value);
     // edge-case: empty list
     if (!head) {
@@ -108,7 +108,7 @@ void Doubly_Linked_List::prepend(int value) {
 
 
 // add a node with given value to the end of the DLL
-void Doubly_Linked_List::append(int value) {
+void Doubly_Linked_List::append(const int value) {
     Node* new_node = new Node(value);
 
     // edge case: DLL is empty
@@ -126,7 +126,7 @@ void Doubly_Linked_List::append(int value) {
 
 
 // add (insert) a node with a particular value to a particular index
-bool Doubly_Linked_List::insert(int index, int value) {
+bool Doubly_Linked_List::insert(const int index, const int value) {
     // check if the index is out of range
     if (index < 0 || index > length) return false;
     // if the index is 0 => begginig od the DLL
@@ -193,7 +193,7 @@ void Doubly_Linked_List::delete_last() {
 
 
 // delete node at a particular index
-void Doubly_Linked_List::delete_node(int index) {
+void Doubly_Linked_List::delete_node(const int index) {
     // covering out-of-range-index situation
     if (index < 0 || index >= length) return;
     // removing the first node

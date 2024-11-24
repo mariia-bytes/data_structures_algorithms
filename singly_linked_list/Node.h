@@ -1,11 +1,8 @@
-/**********************************************
- * This Node.h include implimentation if a 
- * Node class that is a primary element 
- * of a single linked list class which is 
- * defined in Linkd_List.h file and member 
- * functions of which implemented in
- *  Linked_List.cpp file.
-**********************************************/
+/*********************************************************************************
+ * This Node.h include implimentation if a Node class that is a primary element 
+ * of a single linked list class which is defined in Singly_Linkd_List.h file and 
+ * implemented in Singly_Linked_List.cpp file.
+********************************************************************************/
 
 #ifndef NODE_H
 #define NODE_H

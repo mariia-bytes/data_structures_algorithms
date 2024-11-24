@@ -1,10 +1,10 @@
 /***************************************************
- * File Test_Function.h include test functions 
+ * File Test.h includes test functions 
  * prototypes for Doubly Linked List
  * data structure.
  * 
  * Implementations of these prototypes can be found
- * in Test_Functions.cpp file
+ * in Test.cpp file
 ***************************************************/
 
 // test constructor and operator<<

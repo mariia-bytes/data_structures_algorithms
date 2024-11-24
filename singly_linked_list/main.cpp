@@ -1,21 +1,17 @@
-/****************************************************
- * This projest is to help me better understand what
- * Single Linked Lists are, how they are created and 
- * how to use them to solve different cases, 
- * including big amount of problems from LeetCode
-****************************************************/
-
-#include <iostream>
-
 #include "Node.h"
 #include "Singly_Linked_List.h"
 #include "Test.h"
-
 
 int main() {
 
     // test SLL constructor and operator<<
     test_constructor();
+
+    // test basic getters (all at once)
+    test_getters();
+
+    // test get a particular node function
+    test_get();
 
     // test prepend function
     test_prepend();
@@ -35,7 +31,8 @@ int main() {
     // test delete a node somewhere in the middle
     test_delete_node();
 
-
-    
+    // test reverse
+    test_reverse();
+   
     return 0;
 }

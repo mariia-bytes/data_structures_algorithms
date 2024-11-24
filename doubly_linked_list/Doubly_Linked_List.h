@@ -1,3 +1,8 @@
+/***************************************************************************
+ * In this Dounbly_Linked_List.h file Doubly_Linked_List declared. 
+ * Implementation of the class can be found in Doubly_Linked_List.cpp file.
+***************************************************************************/
+
 #ifndef DOUBLY_LINKED_LIST_H
 #define DOUBLY_LINKED_LIST_H
 
@@ -13,27 +18,27 @@ class Doubly_Linked_List {
 
     public:
         // constructor
-        Doubly_Linked_List(int value);
+        Doubly_Linked_List(const int value);
 
         // destructor
         ~Doubly_Linked_List();
 
         // basics getters
-        void get_head();
-        void get_tail();
-        void get_length();
+        void get_head() const;
+        void get_tail() const;
+        void get_length() const;
 
         // get function returns value of the node with given index
-        Node* get(int index);
+        Node* get(const int index) const;
 
         // add a node with given value to the begginig of the DLL
-        void prepend(int value);
+        void prepend(const int value);
 
         // add a node with given value to the end of the DLL
-        void append(int value);
+        void append(const int value);
 
         // add (insert) a node with a particular value at a particular index
-        bool insert(int index, int value);
+        bool insert(const int index, const int value);
 
         // delete first node
         void delete_first();
@@ -42,10 +47,10 @@ class Doubly_Linked_List {
         void delete_last();
 
         // delete node at a particular index
-        void delete_node(int index);
+        void delete_node(const int index);
 
         // change a value of the node of a particular index
-        bool set(int index, int value);
+        bool set(const int index, const int value);
 };
 
 #endif // DOUBLY_LINKED_LIST_H

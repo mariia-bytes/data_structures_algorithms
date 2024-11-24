@@ -9,6 +9,12 @@
 // test constructor and operator<<
 void test_constructor();
 
+// test basic getters (all at once) 
+void test_getters();
+
+// test get a particular node function
+void test_get();
+
 // test prepend function
 void test_prepend();
 
@@ -29,3 +35,6 @@ void test_delete_node();
 
 // test get function
 void test_get();
+
+// test reverse
+void test_reverse();

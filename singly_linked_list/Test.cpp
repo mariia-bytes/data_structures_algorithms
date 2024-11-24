@@ -21,6 +21,24 @@ void test_constructor() {
     delete sll_constr;
 }
 
+// test basic getters (all at once)
+void test_getters() {
+    std::cout << "\n=== Test basic getters ===\n" << std::endl;
+
+    Singly_Linked_List* sll_getters = new Singly_Linked_List(0);
+    sll_getters->append(1);
+    sll_getters->append(2);
+    std::cout << sll_getters << std::endl;
+
+    sll_getters->get_head();
+    sll_getters->get_tail();
+    sll_getters->get_length();
+
+    delete sll_getters;
+}
+
+// test get(int index) function
+
 // test prepend function
 void test_prepend() {
     std::cout << "\n=== Test Prepend function ===\n" << std::endl;
@@ -146,4 +164,20 @@ void test_get() {
     sll_get->get(-100)->value;
 
     delete sll_get;
+}
+
+// test reverse
+void test_reverse() {
+    std::cout << "\n=== Test reverse ===\n" << std::endl;
+
+    Singly_Linked_List* sll_reverse = new Singly_Linked_List(1);
+    sll_reverse->append(2);
+    sll_reverse->append(3);
+    sll_reverse->append(4);
+    std::cout <<  sll_reverse << std::endl;
+
+    sll_reverse->reverse();
+    std::cout << sll_reverse << std::endl;
+
+    delete sll_reverse;
 }

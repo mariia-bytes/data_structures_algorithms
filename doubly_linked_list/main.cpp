@@ -1,12 +1,6 @@
-/****************************************************
- * This projest is to help me better understand what
- * Doubly Linked Lists are, how they are created and 
- * how to use them to solve different cases, 
- * including big amount of problems from LeetCode
-****************************************************/
 #include "Node.h"
 #include "Doubly_Linked_List.h"
-#include "Test_Functions.h"
+#include "Test.h"
 
 int main() {
 
