@@ -5,6 +5,8 @@
  * 
  * Implementation of the member functions can be
  * found in Stack.cpp file.
+ * 
+ * Stack is LIFO data structure
 ***************************************************/
 
 #ifndef _STACK_H_

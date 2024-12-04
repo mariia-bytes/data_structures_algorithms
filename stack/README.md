@@ -30,3 +30,26 @@ To help you navigate this stack project, every file includes a concise descripti
 - **Test.h**: Declaration of the test functions (they test every member function of the Stack class).
 - **Test.cpp**: Implementation of the test functions.
 - **main.cpp**: Contains the `main` function to run tests and demonstrate stack operations.
+
+# Setup
+
+To set up this project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/mariia-bytes/data_structures_algorithms.git
+
+2. **Create a build directory in the chosen project and navigate into it:**
+    ```bash
+    cd data_structure_algorithms/stack/
+    mkdir build/
+    cd build/
+
+3. **Build the project using CMake:**
+    ```bash
+    cmake ..
+    make
+
+4. **Start the executable:**
+    ```bash
+    ./stack

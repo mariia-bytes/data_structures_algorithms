@@ -49,7 +49,6 @@ To set up this project locally, follow these steps:
     ```bash
     ./<project_name>
 
-
 ---
 
 *This project began on July 18th, 2024*

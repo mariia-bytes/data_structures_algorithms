@@ -4,9 +4,7 @@
  * defined in Stack.h
 *************************************************/
 
-#include <iostream>
 #include <climits>
-#include "Node.h"
 #include "Stack.h"
 
 std::ostream &operator<<(std::ostream &os, const Stack* s) {
