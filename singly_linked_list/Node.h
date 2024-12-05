@@ -12,10 +12,8 @@ class Node {
         int value;
         Node* next;
 
-        Node(int value) {
-            this->value = value;
-            this->next = nullptr;
-        }
+        Node(int value)
+            : value(value), next(nullptr) {}
 };
 
 #endif // NODE_H

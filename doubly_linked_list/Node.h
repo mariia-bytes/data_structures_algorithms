@@ -13,11 +13,8 @@ class Node {
         Node* next;
         Node* prev;
 
-    Node (int value) {
-        this->value = value;
-        next = nullptr;
-        prev = nullptr;
-    }
+    Node (int value)
+        : value(value), next(nullptr), prev(nullptr) {}
 };
 
 #endif // NODE_H
