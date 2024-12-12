@@ -11,14 +11,17 @@ class Binary_Search_Tree {
         Binary_Search_Tree();
 
         // print function
-        void print();
+        void print() const;
 
         // insert a new node to the BST
-        bool insert(int value);
+        bool insert(const int value);
+
+        // check if the value is in the BST
+        bool contains(const int value) const;
 
     private:
         // get height of the BST
-        int get_height(Node* root);
+        int get_height(const Node* root) const;      
 };
 
 #endif // BINARY_SEARCH_TREE_H

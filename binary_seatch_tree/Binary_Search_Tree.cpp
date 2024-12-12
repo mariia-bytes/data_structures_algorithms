@@ -11,7 +11,7 @@ Binary_Search_Tree::Binary_Search_Tree()
 
 
 // print the BST
-void Binary_Search_Tree::print() {
+void Binary_Search_Tree::print() const {
     if (root == nullptr) {
         std::cout << "Tree is empty" << std::endl;
     } else {
@@ -54,19 +54,17 @@ void Binary_Search_Tree::print() {
     }
 }
 
-int Binary_Search_Tree::get_height(Node* root) {
+
+// get height of the tree - we need it only for print
+int Binary_Search_Tree::get_height(const Node* root) const {
     if (root == nullptr) return 0;
     
     return std::max(get_height(root->left), get_height(root->right)) + 1;
 }
 
 
-
-
-
-
 // insert a new node to the BST
-bool Binary_Search_Tree::insert(int value) {
+bool Binary_Search_Tree::insert(const int value) {
     Node* new_node = new Node(value);
     // empty BST
     if (root == nullptr) {
@@ -99,4 +97,24 @@ bool Binary_Search_Tree::insert(int value) {
             temp = temp->right;
         }
     }
+}
+
+
+bool Binary_Search_Tree::contains(const int value) const {
+    // empty BST
+    // if (root == nullptr) return false;
+    // but the harsh truth is, you don't need this edge case handling explicitly
+
+    // non-empty BST
+    Node* temp = root;
+    while (temp) {
+        if (value < temp->value) {
+            temp = temp->left;
+        } else if (value > temp->value) {
+            temp = temp->right;
+        } else { // value = temp->value
+            return true;
+        }
+    }
+    return false;
 }

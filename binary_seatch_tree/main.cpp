@@ -10,5 +10,8 @@ int main() {
     // test insert
     test_insert();
 
+    // test contains
+    test_contains();
+
     return 0;
 }
